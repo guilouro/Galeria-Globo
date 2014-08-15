@@ -6,6 +6,8 @@ class _init extends Controller
 	public function index_action($params = null)
 	{
 
+		
+
 		$this -> _layout = 'login';
 
 		$dados = '';
@@ -74,6 +76,23 @@ class _init extends Controller
 
 		if($ok)
 		{
+			$file = ROOT . DS . APP_DIR . DS . "Config" . DS . "database.php";
+
+			$text = "<?php\n";
+			$text .= "	class DATABASE_CONFIG\n";
+			$text .= "	{\n";
+			$text .= "		public static \$default = array(\n";
+			$text .= "			'host' => '{$_POST['host']}',\n";
+			$text .= "			'login' => '{$_POST['user']}',\n";
+			$text .= "			'senha' => '{$_POST['senha']}',\n";
+			$text .= "			'banco' => 'galeria-globo',\n";
+			$text .= "		);\n";
+			$text .= "	}";
+
+			$f = fopen($file, "w+");
+			fwrite($f, $text);
+			fclose($f);
+
 			header("location:" . URL);
 		}
 		else

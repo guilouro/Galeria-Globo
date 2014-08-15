@@ -1,14 +1,14 @@
 {
-  "name": "project-name",
+  "name": "galeria-globo",
   "version": "0.1.0",
-  "title": "Project Title",
-  "homepage": "www.project.com",
+  "title": "Desafio Galeria Globo.com",
+  "homepage": "www.guilhermelouro.com.br",
   "description": "Some description.",
   "private": true,
   "author": {
-    "name": "Author name",
-    "url": "http://authorsite.com.br",
-    "email": "author@email.com"
+    "name": "Guilherme Louro",
+    "url": "http://guilhermelouro.com.br",
+    "email": "guilherme-louro@hotmail.com"
   },
   "keywords": [
     "framework",

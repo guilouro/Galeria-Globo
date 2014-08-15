@@ -1,7 +1,9 @@
 <div class="gallery">
 	
 	<? foreach($imagens as $i): ?>
-		<div class="item"><img src="files/<?= $i['imagem'] ?>" alt=""></div>
+		<div class="item">
+			<img src="<?= URL ?>files/<?= $i['imagem'] ?>" alt="">
+		</div>
 	<? endforeach ?>
 
 </div>

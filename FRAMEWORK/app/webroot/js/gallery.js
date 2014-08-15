@@ -1,3 +1,16 @@
+
+/*
+ * -------------------------------------------------------
+ * Project: Desafio Galeria Globo.com
+ * Version: 0.1.0
+ * Author:  Guilherme Louro (guilherme-louro@hotmail.com)
+ *
+ * Copyright (c) 2014 Desafio Galeria Globo.com
+ * -------------------------------------------------------
+ */
+
+"use strict";
+
 var Gallery = {
 
     init: function(element, options){

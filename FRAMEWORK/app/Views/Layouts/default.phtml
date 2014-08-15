@@ -31,14 +31,19 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="<?= JS ?>gallery.js"></script>
-		<script src="<?= JS ?>site.min.js"></script>
 
-		<!-- Livereload script -->
-		<? if( in_array( $_SERVER['REMOTE_ADDR'], array( '127.0.0.1', '::1' ) ) ): ?>
+		<script type="text/javascript">
+		
+		$(document).ready(function(){
 
-			<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-
-		<? endif ?>
+			$(".gallery").gallery({
+				velocity: 600,
+				width: 900,
+				height: 600
+			});
+		});
+		
+		</script>
 
 	</body>
 

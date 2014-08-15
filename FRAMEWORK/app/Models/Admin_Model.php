@@ -14,7 +14,7 @@
 
 
 		public $pagination = array(
-			'contato'	=> array('limit' => 5)
+			'imagens'	=> array('limit' => 5)
 		);
 
 	}

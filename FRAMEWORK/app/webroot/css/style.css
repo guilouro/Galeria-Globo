@@ -1,0 +1,36 @@
+.gallery {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+.gallery .content {
+  position: absolute;
+}
+.gallery .item {
+  float: left;
+}
+.gallery .description {
+  color: #fff;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+  position: absolute;
+}
+
+.controls {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+}
+.controls #prev {
+  position: absolute;
+  left: -120px;
+}
+.controls #next {
+  position: absolute;
+  right: -120px;
+}

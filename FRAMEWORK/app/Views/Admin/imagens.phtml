@@ -1,0 +1,52 @@
+<? 
+	global $start;
+	if(isset($dados)) extract($dados);
+?>
+
+
+<div class="row">
+	<div class="span6 offset3 form_edit"> 
+
+		<div class="widget">
+			<div class="widget-header">
+				<i class="icon-picture"></i>
+				<h3>Imagens</h3>
+			</div> <!-- /widget-header -->
+
+			<div class="widget-content">
+
+				<? if(isset($status)) echo "<div class='well well-large'><center>" . $status . "</center></div>"; ?>
+
+				<!-- class="form-horizontal" -->
+				<form enctype="multipart/form-data" method="post" action="<?= URL . 'admin/' . $start->_action ?>/imagens/<? if(isset($id)) echo $id; ?>" class="form-horizontal">
+
+					<? if(isset($imagem)) echo "<div class='well well-large'><center><img src='" . URL . 'files/' . $imagem . "' width='100%' /></center></div>"; ?>
+
+					<!-- ARQUIVO -->
+					<label for="">Imagem</label>
+					<div class="fileupload fileupload-new control-group" data-provides="fileupload">
+						<div class="input-append controls">
+							<div class="uneditable-input">
+								<i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span>
+							</div><span class="btn btn-inverse btn-file"><span class="fileupload-new"> <i class="icon icon-folder-open"></i> Arquivo </span><span class="fileupload-exists"> <i class="icon icon-refresh"></i> Mudar </span><input type="file" name="imagem" class="span1" /></span><a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="icon icon-remove"></i> Remover </a>
+						</div>
+					</div>
+					<!-- /Arquivo -->
+
+					<input type="hidden" name="created" value="<?= (isset($created)) ? date('Y-m-d H:i:s', strtotime($created)) : date('Y-m-d H:i:s') ?>">
+
+					<div class="control-group">
+						<div class="controls">						
+							<a href="<?= URL ?>admin/lista/imagens" class="btn btn-default"><i class="icon icon-reply"></i> Voltar</a>
+							<button class="btn btn-success"><i class="icon icon-ok"></i> <?= (isset($id)) ? "Salvar" : "Adicionar" ?></button>
+						</div>
+					</div>								
+
+				</form>
+
+			</div> <!-- /widget-content -->						
+		</div> <!-- /widget -->	
+		
+	</div> <!-- span -->
+
+</div> <!-- row -->

@@ -1,4 +1,4 @@
-<? 
+<?php 
 	global $start;
 	if(isset($dados)) extract($dados);
 ?>
@@ -15,12 +15,12 @@
 
 			<div class="widget-content">
 
-				<? if(isset($status)) echo "<div class='well well-large'><center>" . $status . "</center></div>"; ?>
+				<?php if(isset($status)) echo "<div class='well well-large'><center>" . $status . "</center></div>"; ?>
 
 				<!-- class="form-horizontal" -->
-				<form enctype="multipart/form-data" method="post" action="<?= URL . 'admin/' . $start->_action ?>/imagens/<? if(isset($id)) echo $id; ?>" class="form-horizontal">
+				<form enctype="multipart/form-data" method="post" action="<?= URL . 'admin/' . $start->_action ?>/imagens/<?php if(isset($id)) echo $id; ?>" class="form-horizontal">
 
-					<? if(isset($imagem)) echo "<div class='well well-large'><center><img src='" . URL . 'files/' . $imagem . "' width='100%' /></center></div>"; ?>
+					<?php if(isset($imagem)) echo "<div class='well well-large'><center><img src='" . URL . 'files/' . $imagem . "' width='100%' /></center></div>"; ?>
 
 					<!-- ARQUIVO -->
 					<label for="">Imagem</label>

@@ -19,7 +19,7 @@ Startando o banco de dados diretamente pelo navegador:
 acesse: http://localhost/Galeria-Globo/_init
 ```
 
-O arquivo javascritp desenvolvido para a aplicação se encontra em:
+O arquivo javascript desenvolvido para a aplicação se encontra em:
 
 ```
 app/webroot/js/gallery.js
